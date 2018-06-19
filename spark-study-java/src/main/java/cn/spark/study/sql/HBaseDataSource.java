@@ -8,7 +8,6 @@ import org.apache.hadoop.hbase.client.HBaseAdmin;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.mapreduce.TableInputFormat;
-import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -46,8 +45,6 @@ public class HBaseDataSource {
         hBaseRDD.foreach(new VoidFunction<Tuple2<ImmutableBytesWritable, Result>>() {
             @Override
             public void call(Tuple2<ImmutableBytesWritable, Result> result) throws Exception {
-
-
             }
         });
 
