@@ -52,9 +52,6 @@ public class UDAF {
          */
         sqlContext.udf().register("StringCount", new UserDefinedAggregateFunction() {
 
-            /**
-             *
-             */
             private static final long serialVersionUID = 1L;
 
             /**
